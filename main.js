@@ -92,6 +92,8 @@ document.querySelectorAll('.custom-select').forEach(select => {
     });
 });
 
+
+
 // Lida com a seleção da moeda
 document.querySelectorAll('.option').forEach(option => {
     option.addEventListener('click', function() {

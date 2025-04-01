@@ -159,6 +159,10 @@ padding: 18px 80px;
     display: block;
 }
 
+.btnpara {
+    display: none;
+}
+
 .valorDigitar {
     display: flex;
     justify-content: center;
