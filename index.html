@@ -16,8 +16,8 @@
 <div class="container">
 <section>
     <div class="tituloConvert">
-        <h1>Sempre obtenha a taxa de câmbio real</h1>
-        <p>Acompanhe e realize conversao com a taxa de caâmbio real.</p>
+        <h1>Sempre obtenha a taxa de câmbio real!</h1>
+        <p>Acompanhe e realize conversao com a taxa de câmbio real</p>
     </div>
 </section>
 <section class="valoresConvert">
@@ -25,24 +25,30 @@
         <div class="contentValor">
         <div class="valorInicio">
             <h3 class="descInfo">De</h3>
-            <select class="moedas" id="selectMoeda">
-                <option value="real">Real</option>
-                <option value="dolar">Dolar</option>
-              </select>
+            <div class="custom-select" id="selectMoeda">
+                <div class="selected-option" onclick="toggleOptions()">
+                    <span class="selected-text">Real</span> 
+                    <span class="chevron"><img src="./chevron-down.svg" alt="seta"></span>
+                  </div>
+                <div class="options-container">
+                    <div class="option" data-value="real" id="real">Real</div>
+                    <div class="option" data-value="dolar" id="dolar">Dólar</div>
+                </div>
+              </div>
             <div class="valorDigitar">
-             <input type="text" id="valorInserido" value="1">
+             <input type="text" id="valorInserido" value="1.00">
             </div>
             <div class="taxaConvert">
                 <div>
                     <h3 class="descInfo">Cotação moeda</h3>
-                    <div id="infovalorMoeda">12</div>
+                    <div id="infovalorMoeda">1</div>
                 </div>
                 <div>
                     <h3 class="descInfo">Mudança do dia</h3>
-                    <div id="infomudancMoeda">1.2988</div>
+                    <div id="infomudancMoeda">1200</div>
                 </div>
             </div>
-            <div>
+            <div class="btn">
                 <button id="btnConverter">Conveter</button>
             </div>
         </div>
@@ -52,14 +58,20 @@
         <div class="contentValor">
         <div class="valorFinal">
             <h3 class="descInfo">Para</h3>
-            <select class="moedas" id="selectMoedaPara">
-                <option value="real">Real</option>
-                <option value="dolar">Dolar</option>
-              </select>
+                <div class="custom-select" id="selectMoedaPara">
+                    <div class="selected-option-para" onclick="toggleOptions()">
+                        <span class="selected-text">Dólar</span> 
+                        <span class="chevron"><img src="./chevron-down.svg" alt="seta"></span>
+                      </div>
+                    <div class="options-container">
+                        <div class="option" data-value="real" id="real">Real</div>
+                        <div class="option" data-value="dolar" id="dolar">Dólar</div>
+                    </div>
+                  </div>
               <div class="valorDigitar">
-                <input type="text" id="valorFinalConvetido" value="1">
+                <input type="text" id="valorFinalConvetido" value="6.00">
             </div>
-            <div>
+            <div class="btn">
                 <button id="btnConverterFinal">Conveter</button>
             </div>
         </div>
