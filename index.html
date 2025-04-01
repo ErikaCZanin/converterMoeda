@@ -25,21 +25,21 @@
         <div class="contentValor">
         <div class="valorInicio">
             <h3 class="descInfo">De</h3>
-            <select class="moedas">
+            <select class="moedas" id="selectMoeda">
                 <option value="real">Real</option>
                 <option value="dolar">Dolar</option>
               </select>
             <div class="valorDigitar">
-             <input type="text" id="valorInserido">
+             <input type="text" id="valorInserido" value="1">
             </div>
             <div class="taxaConvert">
                 <div>
                     <h3 class="descInfo">Cotação moeda</h3>
-                    <h1>1.2988</h1>
+                    <div id="infovalorMoeda">12</div>
                 </div>
                 <div>
                     <h3 class="descInfo">Mudança do dia</h3>
-                    <h1>1.2988</h1>
+                    <div id="infomudancMoeda">1.2988</div>
                 </div>
             </div>
             <div>
@@ -52,26 +52,21 @@
         <div class="contentValor">
         <div class="valorFinal">
             <h3 class="descInfo">Para</h3>
-            <select class="moedas">
+            <select class="moedas" id="selectMoedaPara">
                 <option value="real">Real</option>
                 <option value="dolar">Dolar</option>
               </select>
               <div class="valorDigitar">
-                <input type="text" id="valorFinalConvetido" readonly>
+                <input type="text" id="valorFinalConvetido" value="1">
+            </div>
+            <div>
+                <button id="btnConverterFinal">Conveter</button>
             </div>
         </div>
         </div>
     </div>
 </section>
-<script>
-
-document.getElementById("btnConverter").addEventListener("click", function() {
-                let valorInserido = document.getElementById("valorInserido").value;
-                let valorConvertido = valorInserido * 12; 
-
-                // Atualizando o valor na tela
-                document.getElementById("valorFinalConvetido").value = valorConvertido;
- });
-</script>
+<script type="text/javascript" src="./main.js"></script>
 </div>
 </html>
+
