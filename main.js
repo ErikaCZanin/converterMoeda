@@ -35,10 +35,10 @@ document.getElementById("btnConverter").addEventListener("click", function() {
     } 
     // Lógica de conversão dependendo das moedas selecionadas
     else if (moedaSelecionada === 'real' && moedaSelecionadaPara === 'dólar') {
-        valorConvert = valorInserido * 6; // Conversão de Real para Dólar
+        valorConvert = valorInserido / 6; // Conversão de Real para Dólar
     } 
     else if (moedaSelecionada === 'dólar' && moedaSelecionadaPara === 'real') {
-        valorConvert = valorInserido / 6; // Conversão de Dólar para Real
+        valorConvert = valorInserido * 6; // Conversão de Dólar para Real
     }
 
     const numFormatado = valorConvert.toLocaleString('pt-BR', {
@@ -101,16 +101,20 @@ document.querySelectorAll('.option').forEach(option => {
 
         // Atribui o valor à variável valorMoeda com base na opção selecionada
         let valorMoeda = 0;
+        let infoMoeda = 0;
         const moedaSelecionada = this.textContent.trim().toLowerCase(); // Obtém a moeda selecionada
 
         if (moedaSelecionada === 'real') {
             valorMoeda = 1; // Valor para Real
+            infoMoeda = 13333; 
         } else if (moedaSelecionada === 'dólar') {
             valorMoeda = 6; // Valor para Dólar
+            infoMoeda = 122222; 
         }
 
         // Atualiza o valor em infovalorMoeda
         document.getElementById('infovalorMoeda').innerText = valorMoeda;
+        document.getElementById('infomudancMoeda').innerText = infoMoeda;
 
         // Fecha o menu
         this.closest('.custom-select').querySelector('.options-container').classList.remove('open');
