@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <title>Converter moeda</title>
+</head>
+<body>
+    <header>
+        <div class="btnLogin">
+            <button>Realiza login</button>
+        </div>
+    </header>
+</body>
+<div class="container">
+<section>
+    <div class="tituloConvert">
+        <h1>Sempre obtenha a taxa de câmbio real</h1>
+        <p>Acompanhe e realize conversao com a taxa de caâmbio real.</p>
+    </div>
+</section>
+<section class="valoresConvert">
+    <div class="valorInformado">
+        <div class="contentValor">
+        <div class="valorInicio">
+            <h3 class="descInfo">De</h3>
+            <select class="moedas">
+                <option value="real">Real</option>
+                <option value="dolar">Dolar</option>
+              </select>
+            <div class="valorDigitar">
+             <input type="text" id="valorInserido">
+            </div>
+            <div class="taxaConvert">
+                <div>
+                    <h3 class="descInfo">Cotação moeda</h3>
+                    <h1>1.2988</h1>
+                </div>
+                <div>
+                    <h3 class="descInfo">Mudança do dia</h3>
+                    <h1>1.2988</h1>
+                </div>
+            </div>
+            <div>
+                <button id="btnConverter">Conveter</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="valorConvertido">
+        <div class="contentValor">
+        <div class="valorFinal">
+            <h3 class="descInfo">Para</h3>
+            <select class="moedas">
+                <option value="real">Real</option>
+                <option value="dolar">Dolar</option>
+              </select>
+              <div class="valorDigitar">
+                <input type="text" id="valorFinalConvetido" readonly>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+<script>
+
+document.getElementById("btnConverter").addEventListener("click", function() {
+                let valorInserido = document.getElementById("valorInserido").value;
+                let valorConvertido = valorInserido * 12; 
+
+                // Atualizando o valor na tela
+                document.getElementById("valorFinalConvetido").value = valorConvertido;
+ });
+</script>
+</div>
+</html>

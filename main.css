@@ -1,0 +1,110 @@
+body {
+padding: 0px 80px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.valoresConvert, .valorConvertido {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.valorInicio h3,
+.valorInicio h2,
+.valorFinal h2,
+.valorFinal h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.valorInformado{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.valorConvertido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentValor {
+    width: 450px;
+    height: 100%;
+}
+
+.valorDigitar > input {
+    width: 95%;
+    padding: 0px;
+    margin: 0px;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+.valorFinalConvetido {
+    min-height: 250px;
+    background-color: white;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+.btnLogin {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 8px;
+}
+
+.moedas {
+    width: 100%;
+    margin-bottom: 8px;
+    height: 40px;
+}
+
+.valorDigitar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taxaConvert {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.taxaConvert h3,
+.taxaConvert h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.descInfo {
+    font-size: 14px;
+    color: #9E9EA7;
+}
+
+input {
+    border: 0px;
+}
